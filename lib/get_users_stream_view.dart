@@ -3,15 +3,15 @@ import 'package:flutter/material.dart';
 import 'package:nov20/services.dart';
 import 'package:nov20/user_model.dart';
 
-class GetUsersView extends StatelessWidget {
-  const GetUsersView({super.key});
+class GetUsersStreamView extends StatelessWidget {
+  const GetUsersStreamView({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: FutureBuilder(
-        future: FirebaseFirestore.instance
-            .collection('users').get(),
+      body: StreamBuilder(
+        stream: FirebaseFirestore.instance
+            .collection('users').snapshots(),
         builder: (context, snapshot) {
           if (snapshot.hasData) {
             return ListView.builder(

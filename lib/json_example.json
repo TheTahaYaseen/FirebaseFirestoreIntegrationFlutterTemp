@@ -1,0 +1,12 @@
+{
+    "name": "Huzaifa",
+    "address": {
+        "street": "dfs",
+        "block": "sdf",
+        "city": "karachi",
+        "building": {
+            "floor": 2,
+            "side": "left"
+        }
+    } 
+}
